@@ -1,0 +1,58 @@
+<!DOCTYPE html> <html><head>
+        <title>5.P Starter Code [gio version2</title><style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Source+Serif+Pro:ital,wght@1,300&display=swap');
+</style>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #17d3ff;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+h4 {font-family: 'Inter', sans-serif;
+font-family: 'Source Serif Pro', serif;
+}
+</style></head>
+    <body>
+        <div class="title">
+            <h1>Which soccer player are you?</h1>
+        </div> 
+        <div class="questions">
+            <h4>How old are you?</h4>
+            <img src="https://media.makeameme.org/created/how-old-are-5b5211.jpg">
+            <input class="question1" placeholder="Type here ">
+            <h4>If you have the oppurtunite to play in a professional team, do you prefer a Rich team or a Famous team?</h4>
+            <img src="https://static01.nyt.com/images/2022/05/28/sports/live-blog-20220528-champions-league-final-header-trophy/merlin_207708567_8d6620fd-697f-40e6-93fa-4dc12b2abe65-jumbo.jpg"><img src="https://media.cnn.com/api/v1/images/stellar/prod/230227100704-03-psg-marseille-022623.jpg?c=16x9&amp;q=h_270,w_480,c_fill"><input class="question2" placeholder="Type here "><button>Submit</button>
+        </div>
+        <div class="result">
+            this is where the user will see their quiz result!
+            
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var question1 = document.querySelector(".question1").value;
+var question2 = document.querySelector(".question2");
+var button = document.querySelector("button");
+
+button.onclick = function () {
+  var Age = document.querySelector(".question1").value;
+  var team = document.querySelector(".question2").value;
+
+  if (Age <= 16 && team === "Rich") {
+    document.querySelector(".result").innerHTML = "You are " + Age + " years old. You want to play for a " + team + "  team . You are Neymar!";
+  } else if (Age >= 17 && team === "Famous") {
+    document.querySelector(".result").innerHTML = "You are " + Age + " years old. You want to play for a " + team + "   team. You are Messi!";
+  } else if (Age <= 16 && team === "Famous") {
+    document.querySelector(".result").innerHTML = "You are " + Age + " years old. You want to play for a " + team + "   team. You are Cristiano Ronaldo!";
+  } else if (Age >= 17 && team === "Rich") {
+    document.querySelector(".result").innerHTML = "You are " + Age + " years old. You want to play for a " + team + "   team. You are Mbappe!";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbInF1ZXN0aW9uMSIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsInZhbHVlIiwicXVlc3Rpb24yIiwiYnV0dG9uIiwib25jbGljayIsIkFnZSIsInRlYW0iLCJpbm5lckhUTUwiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLFNBQVMsR0FBR0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLEVBQXFDQyxLQUFyRDtBQUNBLElBQUlDLFNBQVMsR0FBR0gsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLENBQWhCO0FBQ0EsSUFBSUcsTUFBTSxHQUFHSixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBYjs7QUFFQUcsTUFBTSxDQUFDQyxPQUFQLEdBQWtCLFlBQVc7QUFDekIsTUFBSUMsR0FBRyxHQUFHTixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsRUFBcUNDLEtBQS9DO0FBQ0EsTUFBSUssSUFBSSxHQUFHUCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsRUFBcUNDLEtBQWhEOztBQUNBLE1BQUtJLEdBQUcsSUFBSSxFQUFQLElBQWFDLElBQUksS0FBSSxNQUExQixFQUFrQztBQUNuQ1AsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTyxTQUFsQyxHQUE0QyxhQUFhRixHQUFiLEdBQW1CLHFDQUFuQixHQUEyREMsSUFBM0QsR0FBa0UsMEJBQTlHO0FBQ0UsR0FGRCxNQUdJLElBQUlELEdBQUcsSUFBSSxFQUFQLElBQWFDLElBQUksS0FBSSxRQUF6QixFQUFtQztBQUNuQ1AsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTyxTQUFsQyxHQUE0QyxhQUFhRixHQUFiLEdBQW1CLHFDQUFuQixHQUEyREMsSUFBM0QsR0FBa0UseUJBQTlHO0FBQ0wsR0FGSyxNQUVDLElBQUtELEdBQUcsSUFBSSxFQUFQLElBQWFDLElBQUksS0FBSSxRQUExQixFQUFvQztBQUNyQ1AsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTyxTQUFsQyxHQUE0QyxhQUFhRixHQUFiLEdBQW1CLHFDQUFuQixHQUEyREMsSUFBM0QsR0FBa0UscUNBQTlHO0FBQ0wsR0FGTSxNQUVBLElBQUlELEdBQUcsSUFBSSxFQUFQLElBQWFDLElBQUksS0FBSSxNQUF6QixFQUFpQztBQUNsQ1AsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLEVBQWtDTyxTQUFsQyxHQUE0QyxhQUFhRixHQUFiLEdBQW1CLHFDQUFuQixHQUE0REMsSUFBNUQsR0FBcUUsMEJBQWpIO0FBQ0w7QUFDRixDQWJEIiwic291cmNlc0NvbnRlbnQiOlsibGV0IHF1ZXN0aW9uMSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24xXCIpLnZhbHVlO1xubGV0IHF1ZXN0aW9uMiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24yXCIpO1xubGV0IGJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCJidXR0b25cIik7XG5cbmJ1dHRvbi5vbmNsaWNrID0gKGZ1bmN0aW9uKCkge1xuICAgIGxldCBBZ2UgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnF1ZXN0aW9uMVwiKS52YWx1ZTtcbiAgICBsZXQgdGVhbSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24yXCIpLnZhbHVlO1xuICAgIGlmICggQWdlIDw9IDE2ICYmIHRlYW09PT0gXCJSaWNoXCIpIHtcbiAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpLmlubmVySFRNTD1cIllvdSBhcmUgXCIgKyBBZ2UgKyBcIiB5ZWFycyBvbGQuIFlvdSB3YW50IHRvIHBsYXkgZm9yIGEgXCIgKyB0ZWFtICsgXCIgIHRlYW0gLiBZb3UgYXJlIE5leW1hciFcIjtcbiAgICB9IFxuICAgZWxzZSBpZiAoQWdlID49IDE3ICYmIHRlYW09PT0gXCJGYW1vdXNcIikgeyAgIFxuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKS5pbm5lckhUTUw9XCJZb3UgYXJlIFwiICsgQWdlICsgXCIgeWVhcnMgb2xkLiBZb3Ugd2FudCB0byBwbGF5IGZvciBhIFwiICsgdGVhbSArIFwiICAgdGVhbS4gWW91IGFyZSBNZXNzaSFcIjtcbiBcdH0gZWxzZSBpZiAoIEFnZSA8PSAxNiAmJiB0ZWFtPT09IFwiRmFtb3VzXCIpIHsgICBcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MPVwiWW91IGFyZSBcIiArIEFnZSArIFwiIHllYXJzIG9sZC4gWW91IHdhbnQgdG8gcGxheSBmb3IgYSBcIiArIHRlYW0gKyBcIiAgIHRlYW0uIFlvdSBhcmUgQ3Jpc3RpYW5vIFJvbmFsZG8hXCI7XG4gXHR9IGVsc2UgaWYgKEFnZSA+PSAxNyAmJiB0ZWFtPT09IFwiUmljaFwiKSB7ICAgXG4gICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpLmlubmVySFRNTD1cIllvdSBhcmUgXCIgKyBBZ2UgKyBcIiB5ZWFycyBvbGQuIFlvdSB3YW50IHRvIHBsYXkgZm9yIGEgXCIgKyAgdGVhbSAgKyAgXCIgICB0ZWFtLiBZb3UgYXJlIE1iYXBwZSFcIjtcbiBcdH0gXG59KTsiXX0=</script></body></html>
